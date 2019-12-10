@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RetrofitMVVMLiveData</string>
+    <string name="error_view_display">ERROR: COULD NOT DISPLAY VIEW!</string>
+</resources>
