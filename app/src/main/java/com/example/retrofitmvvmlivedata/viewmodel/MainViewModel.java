@@ -29,6 +29,7 @@ public class MainViewModel extends AndroidViewModel {
 
 
     public LiveData<List<PostResponse>> getPosts(){
+
         postFactory.getPosts().enqueue(new Callback<List<PostResponse>>() {
             @Override
             public void onResponse(Call<List<PostResponse>> call, Response<List<PostResponse>> response) {
