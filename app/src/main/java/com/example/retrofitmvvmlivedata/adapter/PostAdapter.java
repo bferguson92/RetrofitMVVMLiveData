@@ -11,14 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.retrofitmvvmlivedata.R;
 import com.example.retrofitmvvmlivedata.model.PostResponse;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.CustomViewModel> {
 
-    private List<PostResponse> posts;
+    private List<PostResponse> posts = new ArrayList<>();
 
-    public PostAdapter(List<PostResponse> posts){
+    public void updateData(List<PostResponse> posts){
         this.posts = posts;
+        notifyDataSetChanged();
     }
 
 

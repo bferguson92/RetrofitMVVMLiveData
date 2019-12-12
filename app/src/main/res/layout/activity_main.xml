@@ -7,6 +7,7 @@
     tools:context=".view.MainActivity">
 
     <TextView
+        android:id="@+id/error_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/error_view_display"
@@ -22,4 +23,5 @@
         android:id="@+id/display_posts"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

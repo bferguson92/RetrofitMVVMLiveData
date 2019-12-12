@@ -9,10 +9,10 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PostFactory {
-    private PostService postService;
+    private PostApi postApi;
 
     public  PostFactory(){
-        postService = createService(createRetrofitInstance());
+        postApi = createService(createRetrofitInstance());
     }
 
     private Retrofit createRetrofitInstance(){
@@ -22,11 +22,11 @@ public class PostFactory {
                 .build();
     }
 
-    private PostService createService(Retrofit retrofit){
-        return retrofit.create(PostService.class);
+    private PostApi createService(Retrofit retrofit){
+        return retrofit.create(PostApi.class);
     }
 
     public Call<List<PostResponse>> getPosts(){
-        return postService.getPostResponseList();
+        return postApi.getPostResponseList();
     }
 }

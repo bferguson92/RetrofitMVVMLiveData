@@ -1,6 +1,7 @@
 package com.example.retrofitmvvmlivedata.viewmodel;
 
 import android.app.Application;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -38,6 +39,8 @@ public class MainViewModel extends AndroidViewModel {
 
             @Override
             public void onFailure(Call<List<PostResponse>> call, Throwable t) {
+                currentPosts = null;
+                Log.d("ONFAILURE_CALL", "onFailure called");
 
             }
         });
